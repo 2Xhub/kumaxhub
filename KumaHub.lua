@@ -3845,7 +3845,7 @@ function Update:Window(text,logo,keybind)
 	Hubb.Position = UDim2.new(0, 480, 0, 0)
 	Hubb.Size = UDim2.new(0, 81, 0, 27)
 	Hubb.Font = Enum.Font.GothamSemibold
-	Hubb.Text = "Version|X เวอร์ชั่นเอ๊กซ์"
+	Hubb.Text = "Version 1.0| Blox Fruits์"
 	Hubb.TextColor3 = Color3.fromRGB(255, 255, 255)
 	Hubb.TextSize = 17.000
 	Hubb.TextXAlignment = Enum.TextXAlignment.Left
@@ -3853,7 +3853,7 @@ function Update:Window(text,logo,keybind)
 	local Tab = Instance.new("Frame")
 	Tab.Name = "Tab"
 	Tab.Parent = Main
-	Tab.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+	Tab.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 	Tab.BackgroundTransparency = 1.000
 	Tab.Position = UDim2.new(0, 5, 0, 30)
 	Tab.Size = UDim2.new(0, 150, 0, 350)
@@ -3892,7 +3892,7 @@ local LogoHub = Instance.new("ImageLabel")
 	local Page = Instance.new("Frame")
 	Page.Name = "Page"
 	Page.Parent = Main
-	Page.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+	Page.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 	Page.Position = UDim2.new(0.245426834, 0, 0.075000003, 0)
 	Page.Size = UDim2.new(0, 490, 0, 365)
 
@@ -3944,7 +3944,7 @@ local LogoHub = Instance.new("ImageLabel")
 		TabButton.Parent = ScrollTab
 		TabButton.Name = text.."Server"
 		TabButton.Text = text
-		TabButton.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+		TabButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 		TabButton.BackgroundTransparency = 0.150
 		TabButton.Size = UDim2.new(0, 130, 0, 23)
 		TabButton.Font = Enum.Font.GothamSemibold
@@ -4753,7 +4753,7 @@ local LogoToggle = Instance.new("ImageLabel")
 end
 
 
-local Library = Update:Window("KumaHub","1.0",Enum.KeyCode.RightControl);
+local Library = Update:Window("KUMA X","1.0",Enum.KeyCode.RightControl);
 
 Main = Library:Tab("Genneral",6026568198)
 Sta = Library:Tab("Stats",7040410130)
