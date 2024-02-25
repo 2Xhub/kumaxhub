@@ -19,7 +19,7 @@ local Tabs = {
     Teleport = Window:AddTab({ Title = "Teleport", Icon = "palmtree" }),
     Fruit = Window:AddTab({ Title = "Devil Fruit", Icon = "cherry" }),
     Raid = Window:AddTab({ Title = "Dungeon", Icon = "swords" }),
-    Shop = Window:AddTab({ Title = "Shop", Icon = "shopping-cart" }),,
+    Shop = Window:AddTab({ Title = "Shop", Icon = "shopping-cart" }),
     Race = Window:AddTab({ Title = "Race V4", Icon = "chevrons-right" }),
 	Misc = Window:AddTab({ Title = "Misc", Icon = "list-plus" }),
 }
