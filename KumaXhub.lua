@@ -4528,7 +4528,8 @@ ToggleRemove:OnChanged(function(Value)
             end
         end
         end)
-
+        
+        
 
 local ToggleAotuClick = Tabs.Setting:AddToggle("Auto Click",false,function(value)
 _G.AutoClick = value
