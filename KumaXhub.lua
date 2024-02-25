@@ -4362,7 +4362,7 @@ end
 
 
 
-_G.FastAttackDelay = 0.15
+_G.FastAttackDelay = 0.175
 
     local Client = game.Players.LocalPlayer
     local STOP = require(Client.PlayerScripts.CombatFramework.Particle)
@@ -4528,6 +4528,11 @@ ToggleRemove:OnChanged(function(Value)
             end
         end
         end)
+
+
+local ToggleAotuClick = Tabs.Setting:AddToggle("Auto Click",false,function(value)
+_G.AutoClick = value
+end)
 
 
 
