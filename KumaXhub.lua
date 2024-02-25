@@ -2388,7 +2388,7 @@ local posZ = 0
     })
 
     local DropdownSelectWeapon = Tabs.Main:AddDropdown("DropdownSelectWeapon", {
-        Title = "Select",
+        Title = "Dropdown",
         Values = {'Melee','Sword','Blox Fruit'},
         Multi = false,
         Default = 1,
@@ -3239,6 +3239,26 @@ spawn(function()
     end
 end)
 
+local ToggleRandomBone = Tabs.Shop:AddToggle("ToggleRandomBone", {Title = "Random Bone", Default = false })
+ToggleRandomBone:OnChanged(function(Value)  
+		_G.AutoRandomBone = Value
+end)
+Options.ToggleRandomBone:SetValue(false)
+	
+spawn(function()
+	while wait(0.0000000000000000000000000000000000000000000000000001) do
+	if _G.AutoRandomBone then
+	local args = {
+	 [1] = "Bones",
+	 [2] = "Buy",
+	 [3] = 1,
+	 [4] = 1
+	}
+	game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+	end
+	end
+	end)
+
 
 local ToggleCake = Tabs.Main:AddToggle("ToggleCake", {Title = "Farm Cake Prince", Default = false })
 ToggleCake:OnChanged(function(Value)
@@ -3389,7 +3409,7 @@ spawn(function()
 
 
     local DropdownBoss = Tabs.Main:AddDropdown("DropdownBoss", {
-        Title = "Select",
+        Title = "Dropdown",
         Values = tableBoss,
         Multi = false,
         Default = 1,
@@ -4508,7 +4528,7 @@ CamShake:Stop()
     ToggleBypassTP:OnChanged(function(Value)
         BypassTP = Value
     end)
-    Options.ToggleBypassTP:SetValue(false)
+    Options.ToggleBypassTP:SetValue(true)
 end
 
 
@@ -4530,11 +4550,6 @@ ToggleRemove:OnChanged(function(Value)
         end)
         
         
-
-local ToggleAotuClick = Tabs.Setting:AddToggle("Auto Click",false,function(value)
-_G.AutoClick = value
-end)
-
 
 
 Tabs.Setting:AddParagraph({
@@ -5903,27 +5918,6 @@ end)
 
 --------------------------------------------------------------------------------------------------------------------------------------------
 --shop
-
-local ToggleRandomBone = Tabs.Shop:AddToggle("ToggleRandomBone", {Title = "Random Bone", Default = false })
-ToggleRandomBone:OnChanged(function(Value)  
-		_G.AutoRandomBone = Value
-end)
-Options.ToggleRandomBone:SetValue(false)
-	
-spawn(function()
-	while wait(0.0000000000000000000000000000000000000000000000000001) do
-	if _G.AutoRandomBone then
-	local args = {
-	 [1] = "Bones",
-	 [2] = "Buy",
-	 [3] = 1,
-	 [4] = 1
-	}
-	game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
-	end
-	end
-	end)
-
 
 Tabs.Shop:AddButton({
 	Title = "Geppo",
